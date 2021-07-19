@@ -1,19 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from "react";
+import { useFonts } from "expo-font";
+
+import Navigation from "./src/components/Navigation/Navigation";
+import AppLoading from "expo-app-loading";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  );
-}
+    let [fontsLoaded] = useFonts({
+        "Lato-Regular": require("./src/assets/fonts/Lato/Lato-Regular.ttf"),
+    });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    return <>{fontsLoaded ? <Navigation /> : <AppLoading />}</>;
+}
