@@ -1,35 +1,38 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { StatusBar } from "expo-status-bar";
 
+import theme from "../../styles/theme";
+
+import Header from "../Header/Header";
 import Home from "../Home/Home";
-
-function HomeScreen() {
-    return (
-        <View
-            style={{
-                flex: 1,
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "red",
-            }}
-        >
-            <Text>Home Screen</Text>
-        </View>
-    );
-}
 
 const Stack = createStackNavigator();
 
 function Navigation() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName={"Home"}>
-                <Stack.Screen name="Home" component={Home} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <View style={[styles.container]}>
+            <NavigationContainer>
+                <Stack.Navigator
+                    initialRouteName={"Home"}
+                    screenOptions={{
+                        headerShown: false,
+                    }}
+                >
+                    <Stack.Screen name="Home" component={Home} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </View>
     );
 }
 
 export default Navigation;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: theme.backgroundColorGrey,
+    },
+});

@@ -1,16 +1,29 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import theme from "../../styles/theme";
 import * as React from "react";
+import {
+    StyleSheet,
+    Text,
+    View,
+    TouchableOpacity,
+    SafeAreaView,
+} from "react-native";
+import { StatusBar } from "expo-status-bar";
 
+import theme from "../../styles/theme";
+import t from "../language/en.json";
+
+import Header from "../Header/Header";
+import RecomendationCard from "../RecomendationCard/RecomendationCard";
 import OptionBtn from "../OptionBtn/OptionBtn";
-
-// import {TouchableOpacity} from "react-native-gesture-handler";
 
 const Home = ({}) => {
     return (
-        <View style={[styles.container]}>
-            <OptionBtn label="All" isSelected={false} />
-        </View>
+        <SafeAreaView style={[styles.container]}>
+            <StatusBar style="auto" />
+            <Header />
+            <RecomendationCard />
+
+            <OptionBtn label={t.all} isSelected={false} onPress={() => {}} />
+        </SafeAreaView>
     );
 };
 
@@ -18,8 +31,8 @@ export default Home;
 
 const styles = StyleSheet.create({
     container: {
-        height: "100%",
-        width: "100%",
+        flex: 1,
+
         backgroundColor: theme.backgroundColorGrey,
     },
 });

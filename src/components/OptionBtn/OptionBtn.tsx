@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import theme from "../../styles/theme";
 import * as React from "react";
-import { OptionBtnProps } from "./OptionBtnProps";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
+import theme from "../../styles/theme";
 import { fontClasses } from "../../styles/fontClasses";
+import { styleConstants } from "../../styles/constants";
 import { _1, _12, _46, _78 } from "../constants/sizes";
+
+import { OptionBtnProps } from "./OptionBtnProps";
 
 const OptionBtn: React.FC<OptionBtnProps> = ({
     label,
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         height: _46,
         width: _78,
-        borderRadius: _12,
+        borderRadius: styleConstants.borderRadius_M,
     },
     selectedBtn: {
         backgroundColor: theme.blue50,
