@@ -1,19 +1,12 @@
 import * as React from "react";
-import {
-    StyleSheet,
-    Text,
-    View,
-    TouchableOpacity,
-    SafeAreaView,
-} from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import theme from "../../styles/theme";
-import t from "../language/en.json";
 
 import Header from "../Header/Header";
 import RecomendationCard from "../RecomendationCard/RecomendationCard";
-import OptionBtn from "../OptionBtn/OptionBtn";
+import FilterList from "../FilterList/FilterList";
 
 const Home = ({}) => {
     return (
@@ -22,7 +15,7 @@ const Home = ({}) => {
             <Header />
             <RecomendationCard />
 
-            <OptionBtn label={t.all} isSelected={false} onPress={() => {}} />
+            <FilterList />
         </SafeAreaView>
     );
 };

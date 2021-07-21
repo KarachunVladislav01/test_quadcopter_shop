@@ -14,26 +14,32 @@ export const fontClasses = StyleSheet.create({
     baseLine: {
         fontSize: _16,
         lineHeight: _22,
+        fontStyle: "normal",
         fontFamily: "Lato-Regular",
     },
     boldSmall: {
         fontSize: _16,
         lineHeight: _22,
+        fontStyle: "normal",
         fontFamily: "Lato-Bold",
     },
     boldBig: {
         fontSize: _20,
         lineHeight: _24,
+        fontStyle: "normal",
         fontFamily: "Lato-Bold",
     },
     semiBold: {
         fontSize: _14,
         lineHeight: _17,
+        fontStyle: "normal",
+        // fontWeight: "bold",
         fontFamily: "Lato-Semibold",
     },
     extraBold: {
         fontSize: _24,
         lineHeight: _32,
+        fontStyle: "normal",
         fontFamily: "Lato-Heavy",
     },
 });
