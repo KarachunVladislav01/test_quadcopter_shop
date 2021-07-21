@@ -1,4 +1,4 @@
-import { IconProps } from "../Icon/iconProps";
+import { IconProps } from "../Icon/IconProps";
 
 export interface IconBtnProps extends IconProps {
     activeOpacity?: number;

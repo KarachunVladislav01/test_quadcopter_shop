@@ -1,11 +1,12 @@
 import React from "react";
 import { Image, StyleSheet } from "react-native";
 
-import { IconProps } from "./iconProps";
+import { IconProps } from "./IconProps";
 
 import burgerMenu from "../../assets/icons/burgerMenu.png";
 import home from "../../assets/icons/home.png";
 import searchDefault from "../../assets/icons/searchDefault.png";
+import ratingStar from "../../assets/icons/ratingStar.png";
 
 import { _32 } from "../constants/sizes";
 
@@ -13,6 +14,7 @@ const iconList: { [key: string]: any } = {
     burgerMenu,
     home,
     searchDefault,
+    ratingStar,
 };
 
 const Icon: React.FC<IconProps> = ({

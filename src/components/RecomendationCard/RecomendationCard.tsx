@@ -1,12 +1,5 @@
 import * as React from "react";
-import {
-    StyleSheet,
-    Text,
-    View,
-    Image,
-    TouchableOpacity,
-    SafeAreaView,
-} from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 import theme from "../../styles/theme";
 import { fontClasses } from "../../styles/fontClasses";
@@ -62,10 +55,12 @@ const styles = StyleSheet.create({
         backgroundColor: theme.blue50,
     },
     img: {
-        height: _164,
-        width: _233,
         position: "absolute",
         right: 0,
+
+        height: _164,
+        width: _233,
+        resizeMode: "cover",
     },
     textColor: {
         color: theme.white0,

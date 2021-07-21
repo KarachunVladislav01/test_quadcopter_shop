@@ -62,6 +62,7 @@ const _59 = responsiveValue(59);
 const _60 = responsiveValue(60);
 
 const _64 = responsiveValue(64);
+const _67 = responsiveValue(67);
 const _68 = responsiveValue(68);
 const _72 = responsiveValue(72);
 const _78 = responsiveValue(78);
@@ -72,12 +73,14 @@ const _144 = responsiveValue(144);
 const _148 = responsiveValue(148);
 const _160 = responsiveValue(160);
 const _164 = responsiveValue(164);
+const _168 = responsiveValue(168);
 const _172 = responsiveValue(172);
 const _180 = responsiveValue(180);
-const _233 = responsiveValue(233);
+const _204 = responsiveValue(204);
 const _226 = responsiveValue(226);
-const _252 = responsiveValue(252);
+const _233 = responsiveValue(233);
 const _248 = responsiveValue(248);
+const _252 = responsiveValue(252);
 const _256 = responsiveValue(256);
 const _300 = responsiveValue(300);
 const _400 = responsiveValue(400);
@@ -146,6 +149,7 @@ export {
     _59,
     _60,
     _64,
+    _67,
     _68,
     _72,
     _78,
@@ -156,8 +160,10 @@ export {
     _148,
     _160,
     _164,
+    _168,
     _172,
     _180,
+    _204,
     _226,
     _233,
     _252,

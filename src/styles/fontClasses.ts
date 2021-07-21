@@ -33,8 +33,8 @@ export const fontClasses = StyleSheet.create({
         fontSize: _14,
         lineHeight: _17,
         fontStyle: "normal",
-        // fontWeight: "bold",
-        fontFamily: "Lato-Semibold",
+        fontWeight: "bold",
+        fontFamily: "Lato-Bold",
     },
     extraBold: {
         fontSize: _24,
