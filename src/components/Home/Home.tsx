@@ -7,7 +7,7 @@ import theme from "../../styles/theme";
 import Header from "../Header/Header";
 import RecomendationCard from "../RecomendationCard/RecomendationCard";
 import FilterList from "../FilterList/FilterList";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductsMenu from "../ProductsMenu/ProductsMenu";
 
 const Home = ({}) => {
     return (
@@ -18,7 +18,7 @@ const Home = ({}) => {
 
             <FilterList />
 
-            <ProductCard />
+            <ProductsMenu />
         </SafeAreaView>
     );
 };

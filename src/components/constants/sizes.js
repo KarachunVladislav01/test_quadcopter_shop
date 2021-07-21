@@ -68,6 +68,7 @@ const _72 = responsiveValue(72);
 const _78 = responsiveValue(78);
 const _80 = responsiveValue(80);
 const _84 = responsiveValue(84);
+const _124 = responsiveValue(124);
 const _135 = responsiveValue(135);
 const _144 = responsiveValue(144);
 const _148 = responsiveValue(148);
@@ -155,6 +156,7 @@ export {
     _78,
     _80,
     _84,
+    _124,
     _135,
     _144,
     _148,

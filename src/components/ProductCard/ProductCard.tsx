@@ -17,40 +17,38 @@ import {
     _4,
 } from "../constants/sizes";
 
+import { ProductCardProps } from "./ProductCardProps";
+
 import Icon from "../Icon/Icon";
 
 const dron = require("../../assets/img/DJIAir2S.png");
 
-const ProductCard = ({ activeOpacity = 0.6 }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ style }) => {
     return (
-        <TouchableOpacity activeOpacity={activeOpacity}>
-            <View style={[styles.container]}>
-                <Image source={dron} style={[styles.img]} />
+        <View style={[styles.container, style]}>
+            <Image source={dron} style={[styles.img]} />
 
-                <View style={[styles.description]}>
-                    <Text style={[styles.textColor, fontClasses.semiBold]}>
-                        DJI Air 2S
+            <View style={[styles.description]}>
+                <Text style={[styles.textColor, fontClasses.semiBold]}>
+                    DJI Air 2S
+                </Text>
+                <View style={[styles.buttomDescription]}>
+                    <Text style={[styles.textColor, fontClasses.boldSmall]}>
+                        1424 $
                     </Text>
-                    <View style={[styles.buttomDescription]}>
-                        <Text style={[styles.textColor, fontClasses.boldSmall]}>
-                            1424 $
+                    <View style={[styles.ratingWrapper]}>
+                        <Icon
+                            name="ratingStar"
+                            size={_14}
+                            style={[styles.starIcon]}
+                        ></Icon>
+                        <Text style={[styles.textColor, fontClasses.semiBold]}>
+                            4.2
                         </Text>
-                        <View style={[styles.ratingWrapper]}>
-                            <Icon
-                                name="ratingStar"
-                                size={_14}
-                                style={[styles.starIcon]}
-                            ></Icon>
-                            <Text
-                                style={[styles.textColor, fontClasses.semiBold]}
-                            >
-                                4.2
-                            </Text>
-                        </View>
                     </View>
                 </View>
             </View>
-        </TouchableOpacity>
+        </View>
     );
 };
 
