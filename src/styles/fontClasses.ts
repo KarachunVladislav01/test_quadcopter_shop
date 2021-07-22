@@ -8,7 +8,7 @@ import {
     _22,
     _24,
     _32,
-} from "../components/constants/sizes";
+} from "../constants/sizes";
 
 export const fontClasses = StyleSheet.create({
     baseLine: {

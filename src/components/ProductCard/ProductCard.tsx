@@ -15,7 +15,7 @@ import {
     _248,
     _67,
     _4,
-} from "../constants/sizes";
+} from "../../constants/sizes";
 
 import { ProductCardProps } from "./ProductCardProps";
 

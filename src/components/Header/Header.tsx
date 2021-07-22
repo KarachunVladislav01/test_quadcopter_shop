@@ -6,8 +6,8 @@ import { fontClasses } from "../../styles/fontClasses";
 
 import IconBtn from "../IconBtn/IconBtn";
 
-import { _19, _24, _28, _52, _8 } from "../constants/sizes";
-import t from "../language/en.json";
+import { _19, _24, _28, _52, _8 } from "../../constants/sizes";
+import t from "../../language/en.json";
 
 const Header = () => {
     return (

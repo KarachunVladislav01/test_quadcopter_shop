@@ -4,16 +4,28 @@ import { Image, StyleSheet } from "react-native";
 import { IconProps } from "./IconProps";
 
 import burgerMenu from "../../assets/icons/burgerMenu.png";
-import home from "../../assets/icons/home.png";
+import homeDefault from "../../assets/icons/homeDefault.png";
+import homeFocused from "../../assets/icons/homeFocused.png";
+import heartDefault from "../../assets/icons/heartDefault.png";
+import heartFocused from "../../assets/icons/heartFocused.png";
 import searchDefault from "../../assets/icons/searchDefault.png";
+import searchFocused from "../../assets/icons/searchFocused.png";
+import shopDefault from "../../assets/icons/shopDefault.png";
+import shopFocused from "../../assets/icons/shopFocused.png";
 import ratingStar from "../../assets/icons/ratingStar.png";
 
-import { _32 } from "../constants/sizes";
+import { _32 } from "../../constants/sizes";
 
 const iconList: { [key: string]: any } = {
     burgerMenu,
-    home,
+    homeDefault,
+    homeFocused,
+    heartDefault,
+    heartFocused,
     searchDefault,
+    searchFocused,
+    shopDefault,
+    shopFocused,
     ratingStar,
 };
 

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-import t from "../language/en.json";
-import { _16, _14, _28 } from "../constants/sizes";
+import t from "../../language/en.json";
+import { _16, _14, _28 } from "../../constants/sizes";
 
 import OptionBtn from "../OptionBtn/OptionBtn";
 

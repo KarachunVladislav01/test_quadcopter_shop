@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import theme from "../../styles/theme";
 import { fontClasses } from "../../styles/fontClasses";
 import { styleConstants } from "../../styles/constants";
-import { _16, _164, _233, _20, _22, _32 } from "../constants/sizes";
+import { _16, _164, _233, _20, _22, _32 } from "../../constants/sizes";
 
 const udoDron = require("../../assets/img/udoDron.png");
 
@@ -53,6 +53,12 @@ const styles = StyleSheet.create({
 
         borderRadius: styleConstants.borderRadius_L,
         backgroundColor: theme.blue50,
+
+        shadowColor: styleConstants.shadowColor,
+        shadowOpacity: styleConstants.shadowOpacity,
+        shadowOffset: styleConstants.shadowOffset,
+        shadowRadius: styleConstants.shadowRadius,
+        // elevation: 10,
     },
     img: {
         position: "absolute",

@@ -1,11 +1,11 @@
 import * as React from "react";
-import { StyleSheet, ScrollView, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import { StyleSheet, ScrollView, Text, View } from "react-native";
 
-import theme from "../../styles/theme";
+import { fontClasses } from "../../styles/fontClasses";
 
+import t from "../../language/en.json";
 import ProductCard from "../ProductCard/ProductCard";
-import { _10, _16, _20, _248, _5, _124 } from "../constants/sizes";
+import { _16, _20, _28 } from "../../constants/sizes";
 
 const ProductsMenu = ({}) => {
     const list = [0, 0, 0];
@@ -20,13 +20,19 @@ const ProductsMenu = ({}) => {
     };
 
     return (
-        <ScrollView {...scrollViewOptions}>
-            {list.map((item, index) => (
-                <ProductCard
-                    style={index === 0 ? styles.firstChild : styles.card}
-                />
-            ))}
-        </ScrollView>
+        <View style={[styles.container]}>
+            <Text
+                style={[styles.menuHeader, fontClasses.boldBig]}
+            >{`${t.all} ${t.quadcopters}`}</Text>
+            <ScrollView style={[styles.scrollContainer]} {...scrollViewOptions}>
+                {list.map((item, index) => (
+                    <ProductCard
+                        key={index}
+                        style={index === 0 ? styles.firstChild : styles.card}
+                    />
+                ))}
+            </ScrollView>
+        </View>
     );
 };
 
@@ -34,9 +40,16 @@ export default ProductsMenu;
 
 const styles = StyleSheet.create({
     container: {
-        height: _248,
+        marginBottom: _28,
+    },
+    menuHeader: {
+        paddingHorizontal: _16,
+    },
+
+    scrollContainer: {
         display: "flex",
         flexWrap: "wrap",
+        marginTop: _20,
     },
     card: {
         marginRight: _16,
