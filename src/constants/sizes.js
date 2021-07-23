@@ -84,6 +84,7 @@ const _233 = responsiveValue(233);
 const _248 = responsiveValue(248);
 const _252 = responsiveValue(252);
 const _256 = responsiveValue(256);
+const _281 = responsiveValue(281);
 const _300 = responsiveValue(300);
 const _400 = responsiveValue(400);
 const _480 = responsiveValue(480);
@@ -170,9 +171,10 @@ export {
     _204,
     _226,
     _233,
-    _252,
     _248,
+    _252,
     _256,
+    _281,
     _300,
     _400,
     _480,

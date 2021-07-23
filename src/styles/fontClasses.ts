@@ -7,7 +7,9 @@ import {
     _20,
     _22,
     _24,
+    _28,
     _32,
+    _36,
 } from "../constants/sizes";
 
 export const fontClasses = StyleSheet.create({
@@ -39,6 +41,12 @@ export const fontClasses = StyleSheet.create({
     extraBold: {
         fontSize: _24,
         lineHeight: _32,
+        fontStyle: "normal",
+        fontFamily: "Lato-Heavy",
+    },
+    extraBoldBig: {
+        fontSize: _28,
+        lineHeight: _36,
         fontStyle: "normal",
         fontFamily: "Lato-Heavy",
     },

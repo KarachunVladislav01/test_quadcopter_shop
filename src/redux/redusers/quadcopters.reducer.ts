@@ -71,3 +71,7 @@ export const getQuadcopterFiltredList = (state, filterType?: FiterTypes) => {
             return quadcopterList;
     }
 };
+
+export const getQuadcopter = (state, index: number) => {
+    return state.quadcoptersState[index];
+};
