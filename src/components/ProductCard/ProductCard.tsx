@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, Text, Image, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, Image, View } from "react-native";
 
 import theme from "../../styles/theme";
 import { fontClasses } from "../../styles/fontClasses";
@@ -8,12 +8,10 @@ import {
     _12,
     _14,
     _16,
-    _50,
     _168,
     _18,
     _204,
     _248,
-    _67,
     _4,
 } from "../../constants/sizes";
 
@@ -21,20 +19,23 @@ import { ProductCardProps } from "./ProductCardProps";
 
 import Icon from "../Icon/Icon";
 
-const dron = require("../../assets/img/DJIAir2S.png");
+const ProductCard: React.FC<ProductCardProps> = ({ style, product }) => {
+    const { name, price, score, img } = product;
 
-const ProductCard: React.FC<ProductCardProps> = ({ style }) => {
     return (
         <View style={[styles.container, style]}>
-            <Image source={dron} style={[styles.img]} />
+            <Image
+                source={{ uri: `data:image/png;base64,${img}` }}
+                style={[styles.img]}
+            />
 
             <View style={[styles.description]}>
                 <Text style={[styles.textColor, fontClasses.semiBold]}>
-                    DJI Air 2S
+                    {name}
                 </Text>
                 <View style={[styles.buttomDescription]}>
                     <Text style={[styles.textColor, fontClasses.boldSmall]}>
-                        1424 $
+                        {`${price} $`}
                     </Text>
                     <View style={[styles.ratingWrapper]}>
                         <Icon
@@ -43,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ style }) => {
                             style={[styles.starIcon]}
                         ></Icon>
                         <Text style={[styles.textColor, fontClasses.semiBold]}>
-                            4.2
+                            {score}
                         </Text>
                     </View>
                 </View>
@@ -71,7 +72,6 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         height: _168,
         width: "100%",
-        // backgroundColor: "green",
     },
 
     description: {
@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
         paddingBottom: _16,
         paddingLeft: _16,
         paddingRight: _18,
-        // backgroundColor: "red",
     },
     buttomDescription: {
         display: "flex",

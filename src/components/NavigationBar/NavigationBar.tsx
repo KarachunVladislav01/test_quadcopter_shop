@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { styleConstants } from "../../styles/constants";
-import { _16, _24, _39, _40, _96 } from "../../constants/sizes";
+import { _24, _96 } from "../../constants/sizes";
 
 import Home from "../Home/Home";
 import TemplateScreen from "../TemplateScreen/TemplateScreen";
@@ -22,7 +22,6 @@ const NavigationBar = ({}) => {
                     style: [styles.container],
                     showLabel: false,
                     tabStyle: [styles.tab],
-                    // itemPositioning={"center"},
                     safeAreaInsets: { top: _24 },
                 }}
             >
@@ -30,7 +29,7 @@ const NavigationBar = ({}) => {
                     name="Home"
                     component={Home}
                     options={{
-                        tabBarIcon: ({ focused, size }) => (
+                        tabBarIcon: ({ focused }) => (
                             <Icon
                                 name={`home${
                                     focused ? focusedIcon : defaultIcon
@@ -43,7 +42,7 @@ const NavigationBar = ({}) => {
                     name="Liked"
                     children={() => <TemplateScreen pageName="Liked" />}
                     options={{
-                        tabBarIcon: ({ focused, size }) => (
+                        tabBarIcon: ({ focused }) => (
                             <Icon
                                 name={`heart${
                                     focused ? focusedIcon : defaultIcon
@@ -54,10 +53,9 @@ const NavigationBar = ({}) => {
                 />
                 <Tab.Screen
                     name="Search"
-                    // component={()=>{<TemplateScreen />}
                     children={() => <TemplateScreen pageName="Search" />}
                     options={{
-                        tabBarIcon: ({ focused, size }) => (
+                        tabBarIcon: ({ focused }) => (
                             <Icon
                                 name={`search${
                                     focused ? focusedIcon : defaultIcon

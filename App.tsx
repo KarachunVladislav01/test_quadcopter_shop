@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useFonts } from "expo-font";
 
+import { Provider } from "react-redux";
 import Navigation from "./src/components/Navigation/Navigation";
 import AppLoading from "expo-app-loading";
+
+import { store } from "./src/redux/redusers";
 
 export default function App() {
     let [fontsLoaded] = useFonts({
@@ -12,5 +15,9 @@ export default function App() {
         "Lato-Heavy": require("./src/assets/fonts/Lato/Lato-Heavy.ttf"),
     });
 
-    return <>{fontsLoaded ? <Navigation /> : <AppLoading />}</>;
+    return (
+        <Provider store={store}>
+            {fontsLoaded ? <Navigation /> : <AppLoading />}
+        </Provider>
+    );
 }

@@ -1,6 +1,6 @@
 export interface OptionBtnProps {
     label: string;
-    onPress: () => void;
+    onPress: (event) => void;
     isSelected: boolean;
     activeOpacity?: number;
 }

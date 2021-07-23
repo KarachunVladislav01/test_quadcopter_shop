@@ -9,7 +9,7 @@ import RecomendationCard from "../RecomendationCard/RecomendationCard";
 import FilterList from "../FilterList/FilterList";
 import ProductsMenu from "../ProductsMenu/ProductsMenu";
 
-const Home = ({}) => {
+const Home = () => {
     return (
         <SafeAreaView style={[styles.container]}>
             <StatusBar style="auto" />

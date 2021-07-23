@@ -6,22 +6,27 @@ import { fontClasses } from "../../styles/fontClasses";
 import { styleConstants } from "../../styles/constants";
 import { _16, _164, _233, _20, _22, _32 } from "../../constants/sizes";
 
-const udoDron = require("../../assets/img/udoDron.png");
+const data = require("../../data/data.json");
+
+const { name, price, advertisingSlogan, img } = data.recommendQuadcopter;
 
 const RecomendationCard = ({}) => {
     return (
         <View style={[styles.wrapper]}>
             <View style={[styles.container]}>
-                <Image source={udoDron} style={[styles.img]} />
+                <Image
+                    source={{ uri: `data:image/png;base64,${img}` }}
+                    style={[styles.img]}
+                />
 
                 <Text style={[fontClasses.semiBold, styles.textColor]}>
-                    Need for Speed
+                    {advertisingSlogan}
                 </Text>
                 <Text style={[fontClasses.extraBold, styles.textColor]}>
-                    UdoDron 3 Pro
+                    {name}
                 </Text>
                 <Text style={[fontClasses.boldBig, styles.textColor]}>
-                    1984 $
+                    {`${price} $`}
                 </Text>
             </View>
         </View>
@@ -58,7 +63,6 @@ const styles = StyleSheet.create({
         shadowOpacity: styleConstants.shadowOpacity,
         shadowOffset: styleConstants.shadowOffset,
         shadowRadius: styleConstants.shadowRadius,
-        // elevation: 10,
     },
     img: {
         position: "absolute",

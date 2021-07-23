@@ -1,5 +1,6 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import { StyleSheet, ScrollView, Text, View } from "react-native";
+import { useSelector } from "react-redux";
 
 import { fontClasses } from "../../styles/fontClasses";
 
@@ -7,8 +8,17 @@ import t from "../../language/en.json";
 import ProductCard from "../ProductCard/ProductCard";
 import { _16, _20, _28 } from "../../constants/sizes";
 
-const ProductsMenu = ({}) => {
-    const list = [0, 0, 0];
+import { getQuadcopterListFilter } from "../../redux/redusers/project.reducer";
+import { getQuadcopterFiltredList } from "../../redux/redusers/quadcopters.reducer";
+
+const ProductsMenu = () => {
+    const currentFilter = useSelector((state) =>
+        getQuadcopterListFilter(state)
+    );
+
+    const quadcopterFiltredList = useSelector(
+        (state) => getQuadcopterFiltredList(state, currentFilter) || []
+    );
 
     const scrollViewOptions = {
         horizontal: true,
@@ -25,10 +35,11 @@ const ProductsMenu = ({}) => {
                 style={[styles.menuHeader, fontClasses.boldBig]}
             >{`${t.all} ${t.quadcopters}`}</Text>
             <ScrollView style={[styles.scrollContainer]} {...scrollViewOptions}>
-                {list.map((item, index) => (
+                {quadcopterFiltredList?.map((item, index) => (
                     <ProductCard
-                        key={index}
+                        key={item.id}
                         style={index === 0 ? styles.firstChild : styles.card}
+                        product={item}
                     />
                 ))}
             </ScrollView>

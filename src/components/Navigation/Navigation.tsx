@@ -2,18 +2,12 @@ import * as React from "react";
 import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import { StatusBar } from "expo-status-bar";
 
 import theme from "../../styles/theme";
 
-import Header from "../Header/Header";
-import Home from "../Home/Home";
 import NavigationBar from "../NavigationBar/NavigationBar";
 
 const Stack = createStackNavigator();
-// const Tab = createBottomTabNavigator();
 
 function Navigation() {
     return (
