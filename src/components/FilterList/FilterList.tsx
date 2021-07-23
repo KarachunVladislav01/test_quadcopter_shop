@@ -7,7 +7,7 @@ import { editQuadcopterListFilter } from "../../redux/actions/projectActions";
 
 import {
     getQuadcopterListFilter,
-    fiterTypes,
+    FiterTypes,
 } from "../../redux/redusers/project.reducer";
 
 import t from "../../language/en.json";
@@ -33,23 +33,23 @@ const FilterList = () => {
             <View style={[styles.container]}>
                 <OptionBtn
                     label={t.all}
-                    isSelected={getIsSelected(fiterTypes.All)}
-                    onPress={(e) => onPressFilterHandler(fiterTypes.All)}
+                    isSelected={getIsSelected(FiterTypes.All)}
+                    onPress={(e) => onPressFilterHandler(FiterTypes.All)}
                 />
                 <OptionBtn
                     label={t.cheap}
-                    isSelected={getIsSelected(fiterTypes.Cheap)}
-                    onPress={(e) => onPressFilterHandler(fiterTypes.Cheap)}
+                    isSelected={getIsSelected(FiterTypes.Cheap)}
+                    onPress={(e) => onPressFilterHandler(FiterTypes.Cheap)}
                 />
                 <OptionBtn
                     label={t.best}
-                    isSelected={getIsSelected(fiterTypes.Best)}
-                    onPress={(e) => onPressFilterHandler(fiterTypes.Best)}
+                    isSelected={getIsSelected(FiterTypes.Best)}
+                    onPress={(e) => onPressFilterHandler(FiterTypes.Best)}
                 />
                 <OptionBtn
                     label={t.fast}
-                    isSelected={getIsSelected(fiterTypes.Fast)}
-                    onPress={(e) => onPressFilterHandler(fiterTypes.Fast)}
+                    isSelected={getIsSelected(FiterTypes.Fast)}
+                    onPress={(e) => onPressFilterHandler(FiterTypes.Fast)}
                 />
             </View>
         </View>

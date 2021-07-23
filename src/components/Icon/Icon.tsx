@@ -13,6 +13,7 @@ import searchFocused from "../../assets/icons/searchFocused.png";
 import shopDefault from "../../assets/icons/shopDefault.png";
 import shopFocused from "../../assets/icons/shopFocused.png";
 import ratingStar from "../../assets/icons/ratingStar.png";
+import backArrow from "../../assets/icons/backArrow.png";
 
 import { _32 } from "../../constants/sizes";
 
@@ -27,6 +28,7 @@ const iconList: { [key: string]: any } = {
     shopDefault,
     shopFocused,
     ratingStar,
+    backArrow,
 };
 
 const Icon: React.FC<IconProps> = ({

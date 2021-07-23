@@ -1,6 +1,6 @@
 import { EDIT_QUADCOPTER_LIST_FILTER } from "../actions/projectActions";
 
-export enum fiterTypes {
+export enum FiterTypes {
     All,
     Cheap,
     Best,
@@ -8,11 +8,11 @@ export enum fiterTypes {
 }
 
 export interface ProjectState {
-    quadcopterListFilter: fiterTypes;
+    quadcopterListFilter: FiterTypes;
 }
 
 const initialState: ProjectState = {
-    quadcopterListFilter: fiterTypes.All,
+    quadcopterListFilter: FiterTypes.All,
 };
 
 export function projectState(state: ProjectState = initialState, action) {

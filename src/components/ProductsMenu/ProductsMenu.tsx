@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { StyleSheet, ScrollView, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 
 import { fontClasses } from "../../styles/fontClasses";
@@ -7,11 +8,13 @@ import { fontClasses } from "../../styles/fontClasses";
 import t from "../../language/en.json";
 import ProductCard from "../ProductCard/ProductCard";
 import { _16, _20, _28 } from "../../constants/sizes";
-
+import { SCREENS } from "../Navigation/constants";
 import { getQuadcopterListFilter } from "../../redux/redusers/project.reducer";
 import { getQuadcopterFiltredList } from "../../redux/redusers/quadcopters.reducer";
 
 const ProductsMenu = () => {
+    const navigation = useNavigation();
+
     const currentFilter = useSelector((state) =>
         getQuadcopterListFilter(state)
     );
@@ -19,6 +22,12 @@ const ProductsMenu = () => {
     const quadcopterFiltredList = useSelector(
         (state) => getQuadcopterFiltredList(state, currentFilter) || []
     );
+
+    const onPressHandler = (index) => {
+        navigation.navigate(SCREENS.ORDER, {
+            index,
+        });
+    };
 
     const scrollViewOptions = {
         horizontal: true,
@@ -40,6 +49,7 @@ const ProductsMenu = () => {
                         key={item.id}
                         style={index === 0 ? styles.firstChild : styles.card}
                         product={item}
+                        onPress={(_) => onPressHandler(index)}
                     />
                 ))}
             </ScrollView>

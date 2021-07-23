@@ -1,4 +1,4 @@
-import { fiterTypes } from "./project.reducer";
+import { FiterTypes } from "./project.reducer";
 
 const data = require("../../data/data.json");
 
@@ -27,13 +27,13 @@ export function quadcoptersState(
 }
 
 // selectors
-export const getQuadcopterFiltredList = (state, filterType?: fiterTypes) => {
+export const getQuadcopterFiltredList = (state, filterType?: FiterTypes) => {
     const quadcopterList = state.quadcoptersState;
 
     switch (filterType) {
-        case fiterTypes.All:
+        case FiterTypes.All:
             return quadcopterList;
-        case fiterTypes.Cheap: {
+        case FiterTypes.Cheap: {
             let tmpMinIndex = 0;
 
             quadcopterList?.forEach((item, index) => {
@@ -49,9 +49,9 @@ export const getQuadcopterFiltredList = (state, filterType?: fiterTypes) => {
 
             return [quadcopterList[tmpMinIndex]];
         }
-        case fiterTypes.Best:
+        case FiterTypes.Best:
             return quadcopterList.filter((item) => item.score > 4);
-        case fiterTypes.Fast: {
+        case FiterTypes.Fast: {
             let tmpMinIndex = 0;
 
             quadcopterList?.forEach((item, index) => {

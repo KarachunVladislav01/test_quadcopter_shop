@@ -5,6 +5,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { styleConstants } from "../../styles/constants";
 import { _24, _96 } from "../../constants/sizes";
 
+import { SCREENS } from "../Navigation/constants";
+
 import Home from "../Home/Home";
 import TemplateScreen from "../TemplateScreen/TemplateScreen";
 import Icon from "../Icon/Icon";
@@ -26,7 +28,7 @@ const NavigationBar = ({}) => {
                 }}
             >
                 <Tab.Screen
-                    name="Home"
+                    name={SCREENS.HOME}
                     component={Home}
                     options={{
                         tabBarIcon: ({ focused }) => (
@@ -39,7 +41,7 @@ const NavigationBar = ({}) => {
                     }}
                 />
                 <Tab.Screen
-                    name="Liked"
+                    name={SCREENS.LIKED}
                     children={() => <TemplateScreen pageName="Liked" />}
                     options={{
                         tabBarIcon: ({ focused }) => (
@@ -52,7 +54,7 @@ const NavigationBar = ({}) => {
                     }}
                 />
                 <Tab.Screen
-                    name="Search"
+                    name={SCREENS.SEARCH}
                     children={() => <TemplateScreen pageName="Search" />}
                     options={{
                         tabBarIcon: ({ focused }) => (
@@ -65,7 +67,7 @@ const NavigationBar = ({}) => {
                     }}
                 />
                 <Tab.Screen
-                    name="Shop"
+                    name={SCREENS.SHOP}
                     children={() => <TemplateScreen pageName="Shop" />}
                     options={{
                         tabBarIcon: ({ focused, size }) => (

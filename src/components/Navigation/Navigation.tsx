@@ -4,8 +4,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import theme from "../../styles/theme";
+import { SCREENS } from "./constants";
 
 import NavigationBar from "../NavigationBar/NavigationBar";
+import OrderPage from "../OrderPage/OrderPage";
 
 const Stack = createStackNavigator();
 
@@ -14,15 +16,17 @@ function Navigation() {
         <View style={[styles.container]}>
             <NavigationContainer>
                 <Stack.Navigator
-                    initialRouteName={"NavigationBar"}
+                    initialRouteName={SCREENS.NAVIGATION_BAR}
                     screenOptions={{
                         headerShown: false,
                     }}
                 >
                     <Stack.Screen
-                        name="NavigationBar"
+                        name={SCREENS.NAVIGATION_BAR}
                         component={NavigationBar}
                     />
+
+                    <Stack.Screen name={SCREENS.ORDER} component={OrderPage} />
                 </Stack.Navigator>
             </NavigationContainer>
         </View>
