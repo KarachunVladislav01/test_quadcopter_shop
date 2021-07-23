@@ -27,7 +27,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
     const { name, price, score, img } = product;
 
     return (
-        <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
+        <TouchableOpacity
+            style={[styles.container, style]}
+            onPress={onPress}
+            activeOpacity={1}
+        >
             <Image
                 source={{ uri: `data:image/png;base64,${img}` }}
                 style={[styles.img]}
