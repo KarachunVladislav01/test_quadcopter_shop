@@ -6,5 +6,10 @@
     "fast": "Fast",
     "quadcopters": "Quadcopters",
     "orderAccepted": "Your order is accepted",
-    "ordinaryQuadcopter": "Ordinary quadcopter"
+    "ordinaryQuadcopter": "Ordinary quadcopter",
+    "order": "Order",
+    "ok": "Ok",
+    "name": "Name",
+    "phone": "+375  (__)___-__-__",
+    "defaultPhoneCode": "+375"
 }

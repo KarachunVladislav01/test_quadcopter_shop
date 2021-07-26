@@ -7,6 +7,7 @@ const theme = {
     black0: "#000000",
     black50: "#1F1F1F",
     gold50: "#F5D150",
+    red50: "#ff403c",
 };
 
 export default theme;

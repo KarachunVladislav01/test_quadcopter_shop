@@ -14,6 +14,7 @@ import shopDefault from "../../assets/icons/shopDefault.png";
 import shopFocused from "../../assets/icons/shopFocused.png";
 import ratingStar from "../../assets/icons/ratingStar.png";
 import backArrow from "../../assets/icons/backArrow.png";
+import order from "../../assets/icons/order.png";
 
 import { _32 } from "../../constants/sizes";
 
@@ -29,6 +30,7 @@ const iconList: { [key: string]: any } = {
     shopFocused,
     ratingStar,
     backArrow,
+    order,
 };
 
 const Icon: React.FC<IconProps> = ({
@@ -41,21 +43,9 @@ const Icon: React.FC<IconProps> = ({
     return (
         <Image
             source={iconList[name]}
-            style={[
-                styles.container,
-                { width: width || size, height: height || size },
-                style,
-            ]}
+            style={[{ width: width || size, height: height || size }, style]}
         />
     );
 };
 
 export default Icon;
-
-const styles = StyleSheet.create({
-    container: {
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});

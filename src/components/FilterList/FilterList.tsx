@@ -13,7 +13,7 @@ import {
 import t from "../../language/en.json";
 import { _16, _14, _28 } from "../../constants/sizes";
 
-import OptionBtn from "../OptionBtn/OptionBtn";
+import OptionBtn from "../Button/OptionBtn/OptionBtn";
 
 const FilterList = () => {
     const dispatch = useDispatch();

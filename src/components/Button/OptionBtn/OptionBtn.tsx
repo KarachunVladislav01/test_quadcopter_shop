@@ -1,10 +1,10 @@
 import * as React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-import theme from "../../styles/theme";
-import { fontClasses } from "../../styles/fontClasses";
-import { styleConstants } from "../../styles/constants";
-import { _1, _46, _78 } from "../../constants/sizes";
+import theme from "../../../styles/theme";
+import { fontClasses } from "../../../styles/fontClasses";
+import { styleConstants } from "../../../styles/constants";
+import { _1, _46, _78 } from "../../../constants/sizes";
 
 import { OptionBtnProps } from "./OptionBtnProps";
 

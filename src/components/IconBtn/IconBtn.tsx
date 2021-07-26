@@ -14,22 +14,20 @@ const IconBtn: React.FC<IconBtnProps> = ({
     activeOpacity = 0.6,
 }) => {
     return (
-        <TouchableOpacity activeOpacity={activeOpacity} onPress={onPress}>
-            <View style={[styles.container]}>
-                <Icon
-                    style={style}
-                    name={name}
-                    width={width}
-                    height={height}
-                    size={size}
-                />
-            </View>
+        <TouchableOpacity
+            activeOpacity={activeOpacity}
+            onPress={onPress}
+            style={[{ width: width || size, height: height || size }, style]}
+        >
+            <Icon
+                style={style}
+                name={name}
+                width={width}
+                height={height}
+                size={size}
+            />
         </TouchableOpacity>
     );
 };
 
 export default IconBtn;
-
-const styles = StyleSheet.create({
-    container: {},
-});
