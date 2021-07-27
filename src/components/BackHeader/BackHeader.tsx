@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import IconBtn from "../IconBtn/IconBtn";
 
-import { _44, _52, _8, _4 } from "../../constants/sizes";
+import { _44, _52, _8, _4, _16 } from "../../constants/sizes";
 
 const BackHeader = () => {
     const navigation = useNavigation();
@@ -25,6 +25,7 @@ export default BackHeader;
 const styles = StyleSheet.create({
     container: {
         paddingVertical: _4,
+        paddingHorizontal: _16,
         marginTop: _8,
     },
 });

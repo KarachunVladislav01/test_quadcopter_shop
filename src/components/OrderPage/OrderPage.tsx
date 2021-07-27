@@ -105,6 +105,8 @@ const OrderPage = () => {
 
     return (
         <SafeAreaView style={[styles.container]}>
+            <StatusBar style="auto" />
+            <BackHeader />
             <KeyboardAvoidingView
                 behavior={Platform.OS === "ios" ? "padding" : "height"}
                 style={[styles.container]}
@@ -114,8 +116,6 @@ const OrderPage = () => {
                 >
                     <ScrollView ref={scroll} style={[styles.container]}>
                         <View style={[styles.inner]}>
-                            <StatusBar style="auto" />
-                            <BackHeader />
                             <View style={[styles.imgWrapper]}>
                                 <Image
                                     source={{
